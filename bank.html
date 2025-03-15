@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sonar Bank</title>
+</head>
+
+<body class="bg-slate-800">
+    
+    <section class="max-w-md min-h-screen bg-gray-200
+    mx-auto ">
+<header class="flex justify-between px-3 shadow-md">
+    <nav class="flex justify-around items-center">
+        <img src="aaset/Vector.png" alt="">
+        <div>
+            <h1 class="text-2xl font-bold">TK<span id="main-balance">0</span></h1>
+            <p>Availabe Blance</p>
+        </div>
+       
+    </nav>
+    <button class="btn">Logut</button>
+
+ 
+</header>
+
+<section class="mt-11 mx-4">
+    <h1 class="text-2xl font-extrabold">
+        🔥 Welcome to Sonar Bank!
+    </h1>
+    <p class="pt-2 text-[#08080880]">
+        Enjoy easy and convenient financial services with us. <br> Cashout charge is low and 
+    </p>
+<!-- box -->
+<div class="cards mt-5 grid grid-cols-3 gap-6">
+  <!-- Add Money -->
+    <div id="add-money-box" class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/wallet1.png" alt="">
+        <h1 class="text-center">Add Money</h1>
+    </div>
+    <!-- Cash out -->
+    <div id="cashout-box" class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/send1.png" alt="">
+        <h1 class="text-center">Cashout</h1>
+    </div>
+    <!-- transfer -->
+    <div class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/money1.png" alt="">
+        <h1 class="text-center">Transfer Money</h1>
+    </div>
+    <!-- bonus -->
+    <div class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/bonus1.png" alt="">
+        <h1 class="text-center">Get Bonus</h1>
+    </div>
+    <!-- pay bill -->
+    <div class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/purse1.png" alt="">
+        <h1 class="text-center">Pay Bill</h1>
+    </div>
+    <!-- transcastion -->
+    <div class="box cursor-pointer shadow rounded-lg p-3">
+        <img class="mx-auto" src="assets/transaction1.png"">
+        <h1 class="text-center">Transactions</h1>
+    </div>
+</div>
+<!-- add money -->
+<section id="addmoney" class="mt-7">
+    <h1 class="text-2xl font-bold">Add Money</h1>
+    <div class="">
+      
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Select A Bank</span>
+                </label>
+                <select class="select select-info w-full max-w-xs">
+                    <option disabled selected>Select Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagod</option>
+                    <option>Upay</option>
+                  </select>
+            </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input id="account-num" type="number" placeholder="Enter 11 digit account number"
+               class="input input-bordered" required />
+              </div>
+              <label class="label">
+                <span class="label-text">Amount to Add</span>
+              </label>
+              <input type="number" id="amount" placeholder="Add Amount " class="input input-bordered" required />
+              <label class="label">
+                <span class="label-text">Pin Number</span>
+              </label>
+              <input type="number" placeholder="Enter 4 digit pin number" 
+              class="input input-bordered" id="pin" required />
+        
+              <div class="form-control mt-6">
+                <button id="add-money" class="btn btn-primary bg-[#0874F2]">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- Cash Out -->
+<section id="cashout" class="mt-7">
+  <h1 class="text-2xl font-bold">Cash Out</h1>
+  
+  <div class="">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+    
+      </div>
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Agent Number</span>
+            </label>
+            <input type="number" placeholder="Enter 11 digitenum" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Amount</span>
+            </label>
+            <input id="cashout-amount" type="number" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+          
+            <label class="label">
+              <span class="label-text">Pin Number</span>
+            </label>
+            <input id="cashout-pin" type="number" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+          
+          </div>
+          <div class="form-control mt-6">
+            <button id="cashout-btn" class="btn btn-primary">CashOut</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+</section>
+    </section>
+
+
+
+
+
+
+
+    <script src="script/togole.js"></script>
+    <script src="script/addmone.js"></script>
+    <script src="script/utilities.js"></script>
+    <script src="script/out.js"></script>
+</body>
+
+
+</html>
